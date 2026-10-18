@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ====================================================== -->
+    <!-- FONTS -->
+    <!-- ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ====================================================== -->
+    <!-- ICONS -->
+    <!-- ====================================================== -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <script
+      src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11/build/highlight.min.js"
+      defer
+    ></script>
+    <script src="script.js" defer></script>
+    <title>💻 Code Snippets Library</title>
+  </head>
+  <body>
+    <!-- ====================================================== -->
+    <!-- BACKGROUND -->
+    <!-- ====================================================== -->
+
+    <div class="background-grid"></div>
+    <div class="background-glow background-glow-one"></div>
+    <div class="background-glow background-glow-two"></div>
+
+    <!-- ====================================================== -->
+    <!-- HEADER -->
+    <!-- ====================================================== -->
+
+    <header class="header">
+      <a href="#" class="logo">
+        <i class="bi bi-code-slash"></i>
+
+        <div class="logo-content">
+          <h3>CodeSnippets <span>PRO</span></h3>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#snippetsSection" class="nav-link">Snippets</a>
+        <a href="#categoriesSection" class="nav-link">Categories</a>
+        <a href="#" class="nav-link">About</a>
+      </nav>
+
+      <button
+        class="theme-button"
+        id="themeBtn"
+        type="button"
+        aria-label="Toggle theme"
+      >
+        <i class="bi bi-sun-fill"></i>
+        <i class="bi bi-moon-stars-fill"></i>
+      </button>
+    </header>
+
+    <!-- ====================================================== -->
+    <!-- MAIN -->
+    <!-- ====================================================== -->
+
+    <main id="home">
+      <!-- ====================================================== -->
+      <!-- HERO SECTION -->
+      <!-- ====================================================== -->
+
+      <section class="hero-section">
+        <div class="hero-left">
+          <div class="hero-content">
+            <div class="hero-badge">Developer Tools</div>
+            <h1>Code Snippets <span>Library PRO</span></h1>
+            <p>
+              A collection of useful code snippets for modern web development.
+              Save time, learn new techniques and keep your favorite snippets in
+              one place.
+            </p>
+
+            <div class="hero-actions">
+              <button class="explore-btn primary" id="exploreBtn" type="button">
+                <i class="bi bi-search"></i>
+                <p>Explore Snippets</p>
+              </button>
+
+              <button
+                class="browse-categories-btn"
+                id="browseCategoriesBtn"
+                type="button "
+              >
+                <i class="bi bi-diagram-3"></i>
+                <p>Browse Categories</p>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-note">
+            <p>
+              Clean <br />
+              Code
+              <span
+                >Better <br />
+                Development</span
+              >
+            </p>
+
+            <i class="bi bi-arrow-down-left"></i>
+          </div>
+          <div class="hero-code-box">
+            <div class="code-box-header">
+              <div class="dots-box">
+                <div class="dot red"></div>
+                <div class="dot yellow"></div>
+                <div class="dot green"></div>
+              </div>
+
+              <div class="code-badge">
+                <i class="devicon-javascript-plain"></i>
+                JavaScript
+              </div>
+            </div>
+
+            <div class="code-box-content">
+              <pre><code><span class="code-purple">const</span> uniqueItems = <span class="code-blue">(array)</span> <span class="code-purple">=&gt;</span> {
+  <span class="code-purple">return</span> [...<span class="code-purple">new</span> <span class="code-yellow">Set</span>(array)];
+};
+
+<span class="code-gray">// Example</span>
+<span class="code-purple">const</span> numbers = [<span class="code-orange">1</span>, <span class="code-orange">2</span>, <span class="code-orange">2</span>, <span class="code-orange">3</span>];
+
+<span class="code-blue">console</span>.<span class="code-green">log</span>(uniqueItems(numbers));</code></pre>
+            </div>
+
+            <div class="code-box-footer">
+              <button
+                class="hero-copy-button"
+                id="heroCopyBtn"
+                type="button"
+                aria-label="Copy code"
+              >
+                <i class="bi bi-copy"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================== -->
+      <!-- STATS SECTION -->
+      <!-- ====================================================== -->
+
+      <section class="stats-section">
+        <div class="stat-boxes">
+          <div class="stat-box">
+            <i class="bi bi-code-slash blue"></i>
+            <div class="stat-content">
+              <span id="codeSnippetsValue">50+</span>
+              <p>Code Snippets</p>
+            </div>
+          </div>
+
+          <div class="stat-box">
+            <i class="bi bi-layers purple"></i>
+            <div class="stat-content">
+              <span id="categoriesValue">6</span>
+              <p>Categories</p>
+            </div>
+          </div>
+
+          <div class="stat-box">
+            <i class="bi bi-heart red"></i>
+            <div class="stat-content">
+              <span id="favoriteSnippetsValue">0</span>
+              <p>Favorite Snippets</p>
+            </div>
+          </div>
+
+          <div class="stat-box">
+            <i class="bi bi-lightning-charge-fill green"></i>
+            <div class="stat-content">
+              <span id="freeToUseValue">100%</span>
+              <p>Free to Use</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================== -->
+      <!-- SEARCH & CATEGORIES SECTION -->
+      <!-- ====================================================== -->
+
+      <section class="filters-section" id="categoriesSection">
+        <div class="search-box">
+          <i class="bi bi-search"></i>
+
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search snippets..."
+            autocomplete="off"
+          />
+
+          <div class="search-shortcut">
+            <span>Ctrl</span>
+            <span>+</span>
+            <span>K</span>
+          </div>
+        </div>
+
+        <div class="categories-filter">
+          <button
+            class="category-button active"
+            type="button"
+            data-category="all"
+          >
+            <span>All</span>
+          </button>
+
+          <button
+            class="category-button"
+            type="button"
+            data-category="javascript"
+          >
+            <i class="devicon-javascript-plain colored"></i>
+            <span>JavaScript</span>
+          </button>
+
+          <button class="category-button" type="button" data-category="css">
+            <i class="devicon-css3-plain colored"></i>
+            <span>CSS</span>
+          </button>
+
+          <button class="category-button" type="button" data-category="html">
+            <i class="devicon-html5-plain colored"></i>
+            <span>HTML</span>
+          </button>
+
+          <button class="category-button" type="button" data-category="git">
+            <i class="devicon-git-plain colored"></i>
+            <span>Git</span>
+          </button>
+
+          <button class="category-button" type="button" data-category="react">
+            <i class="devicon-react-original colored"></i>
+            <span>React</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- ====================================================== -->
+      <!-- POPULAR SNIPPETS SECTION -->
+      <!-- ====================================================== -->
+
+      <section class="popular-snippets-section" id="snippetsSection">
+        <div class="popular-snippets-header">
+          <div class="popular-snippets-title">
+            <div class="popular-snippets-heading">
+              <i class="bi bi-fire"></i>
+              <h2>Popular Snippets</h2>
+            </div>
+
+            <p>Useful code snippets for everyday frontend development.</p>
+          </div>
+
+          <div class="sort-box">
+            <span>Sort by:</span>
+
+            <select id="sortSelect">
+              <option value="popular">Popular</option>
+              <option value="newest">Newest</option>
+              <option value="alphabetical">A-Z</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="snippets-grid" id="snippetsGrid">
+          <!-- SNIPPET CARDS RENDERED WITH JAVASCRIPT -->
+        </div>
+
+        <div class="view-all-snippets-box">
+          <button
+            class="view-all-snippets-btn"
+            id="viewAllSnippetsBtn"
+            type="button"
+          >
+            <span>View All Snippets</span>
+            <i class="bi bi-chevron-down"></i>
+          </button>
+        </div>
+      </section>
+
+      <!-- ====================================================== -->
+      <!-- WORKFLOW CTA SECTION -->
+      <!-- ====================================================== -->
+
+      <section class="workflow-section">
+        <div class="workflow-left">
+          <div class="workflow-code-box">
+            <div class="workflow-code-header">
+              <div class="workflow-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+            </div>
+
+            <div class="workflow-code-content">
+              <div class="workflow-code-line">
+                <span class="line-number">1</span>
+                <code>// Build faster</code>
+              </div>
+
+              <div class="workflow-code-line">
+                <span class="line-number">2</span>
+                <code>// Learn smarter</code>
+              </div>
+
+              <div class="workflow-code-line">
+                <span class="line-number">3</span>
+                <code>// Code better</code>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="workflow-right">
+          <div class="workflow-title">
+            <h2>Improve Your <span>Development Workflow</span></h2>
+            <p>
+              Save your favorite snippets, explore new techniques and boost your
+              productivity with ready-to-use code examples.
+            </p>
+
+            <div class="workflow-actions">
+              <button
+                class="explore-btn primary"
+                id="workFlowBtn"
+                type="button"
+              >
+                <i class="bi bi-search"></i>
+                <p>Explore Snippets</p>
+              </button>
+
+              <button
+                class="view-categories-btn"
+                id="viewCategoriesBtn"
+                type="button"
+              >
+                <i class="bi bi-book"></i>
+                <p>Browse Categories</p>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="workflow-note">
+          <p>
+            Small <br />
+            Snippets
+            <span>Big Progress</span>
+          </p>
+
+          <i class="bi bi-arrow-down-left"></i>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
