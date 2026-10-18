@@ -6,7 +6,7 @@ Browse useful frontend development snippets, search by keyword, filter by catego
 
 ## 🚀 Live Demo
 
-👉 [View Live Demo]()
+👉 [View Live Demo](https://johnyisbackk.github.io/js-code-snippets-library/)
 
 ---
 
